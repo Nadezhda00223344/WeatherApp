@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     String city = user_field.getText().toString();
                     String key = "e823ccbee071befd6937eba93563054d";
-                    String url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+key;
+                    String url = "http://api.weatherapi.com/v1/forecast.json?key=058411eaa1a245dca44103136222510&q="+city+"&days=3&lang=ru";
 
                     new GetURLDate().execute(url);
                 }
@@ -91,8 +94,28 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result){
             super.onPostExecute(result);
+            try {
+                JSONObject obj = new JSONObject(result);
+                info_result.setText(obj.getJSONObject("current").getJSONObject("condition").getString("text")+"\n"
+                        +obj.getJSONObject("current").getDouble("temp_c")+"\n"+"\n"
 
-            info_result.setText(result);
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getString("date")+"\n"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getJSONArray("hour").getJSONObject(8).getString("temp_c")+"/"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getJSONArray("hour").getJSONObject(18).getString("temp_c")+"\n"+"\n"
+
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getString("date")+"\n"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getJSONArray("hour").getJSONObject(8).getString("temp_c")+"/"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getJSONArray("hour").getJSONObject(18).getString("temp_c")+"\n"+"\n"
+
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getString("date")+"\n"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getJSONArray("hour").getJSONObject(8).getString("temp_c")+"/"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getJSONArray("hour").getJSONObject(18).getString("temp_c")+"\n"+"\n"
+                );
+                //info_result2.setText("Температура"+obj.getJSONObject("current").getJSONObject("condition").getString("text"));
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 
