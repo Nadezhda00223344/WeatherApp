@@ -101,17 +101,18 @@ public class MainActivity extends AppCompatActivity {
 
                         +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getString("date")+"\n"
                         +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getJSONArray("hour").getJSONObject(8).getString("temp_c")+"/"
-                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getJSONArray("hour").getJSONObject(18).getString("temp_c")+"\n"+"\n"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(0).getJSONArray("hour").getJSONObject(17).getString("temp_c")+"\n"+"\n"
 
                         +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getString("date")+"\n"
                         +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getJSONArray("hour").getJSONObject(8).getString("temp_c")+"/"
-                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getJSONArray("hour").getJSONObject(18).getString("temp_c")+"\n"+"\n"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(1).getJSONArray("hour").getJSONObject(17).getString("temp_c")+"\n"+"\n"
 
                         +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getString("date")+"\n"
                         +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getJSONArray("hour").getJSONObject(8).getString("temp_c")+"/"
-                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getJSONArray("hour").getJSONObject(18).getString("temp_c")+"\n"+"\n"
+                        +obj.getJSONObject("forecast").getJSONArray("forecastday").getJSONObject(2).getJSONArray("hour").getJSONObject(17).getString("temp_c")+"\n"+"\n"
+
+
                 );
-                //info_result2.setText("Температура"+obj.getJSONObject("current").getJSONObject("condition").getString("text"));
 
             } catch (JSONException e) {
                 e.printStackTrace();
