@@ -4,51 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="90sp"
+        android:layout_height="wrap_content"
+
+        app:srcCompat="@drawable/group_57" />
 
     <TextView
         android:id="@+id/Logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/abril_fatface"
+        android:layout_below="@+id/imageView"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/inter"
         android:text="@string/logo_t"
-        android:layout_marginTop="30sp"
         android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="30sp" />
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Logo"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/group_61" />
     <EditText
         android:id="@+id/user_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20sp"
-        android:layout_marginHorizontal="50sp"
-        android:backgroundTint="@color/teal_700"
-        android:inputType="textPersonName"
         android:layout_below="@id/Logo"
-        android:hint="@string/hint_user_field" />
-
-    <Button
-        android:id="@+id/main_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_below="@id/user_field"
+        android:layout_marginHorizontal="50sp"
         android:layout_marginTop="20sp"
-        android:layout_marginHorizontal="130sp"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@color/white"
-        android:text="@string/main_button" />
-    <TextView
-        android:id="@+id/info_result"
-        android:layout_width="match_parent"
+        android:ems="10"
+        android:hint="@string/hint_user_field"
+        android:inputType="textPersonName" />
+
+    <ImageButton
+        android:id="@+id/main_button"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_below="@id/main_button"
-        android:layout_marginTop="30sp"
-        android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="30sp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/group_60" />
+
 
 </RelativeLayout>

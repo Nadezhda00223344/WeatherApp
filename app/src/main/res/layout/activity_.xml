@@ -4,30 +4,195 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="497dp"
+        app:srcCompat="@drawable/rectangle_4" />
+
+    <TextView
+        android:id="@+id/CurrentTemp_C"
+        android:layout_width="wrap_content"
+        android:layout_height="168dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/inter_bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="150dp" />
+
+    <TextView
+        android:id="@+id/Celsia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/CurrentTemp_C"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/CurrentTemp_C"
+        android:fontFamily="@font/inter_bold"
+        android:text="ºC"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/CurrentConditionalText"
+        android:layout_width="182dp"
+        android:layout_height="43dp"
+        android:layout_below="@id/CurrentTemp_C"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/rectangle_5__1_" />
+
+    <TextView
+        android:id="@+id/day3Info"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/day3InfoTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="40dp"
+
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView8"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/rectangle_5__1_" />
+
 
 
     <TextView
-        android:id="@+id/Logo"
+        android:id="@+id/day2InfoTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+
+        android:layout_alignBottom="@+id/imageView9"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:visibility="visible"
+        />
+    <ImageView
+        android:id="@+id/imageView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
-        android:fontFamily="@font/abril_fatface"
-        android:text="@string/rezult_w"
-        android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="30sp" />
+        android:layout_above="@+id/imageView9"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/rectangle_5__1_" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_below="@id/Logo"
-        android:layout_marginTop="30sp"
-        android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="30sp" />
+        android:id="@+id/day1Info"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
 
+        android:layout_alignBottom="@+id/imageView10"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/day1InfoTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+
+        android:layout_alignBottom="@+id/imageView10"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/day2Info"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+
+        android:layout_alignBottom="@+id/imageView9"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/NightCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toStartOf="@+id/NightCity"
+        app:srcCompat="@drawable/group_4" />
 
 </RelativeLayout>
